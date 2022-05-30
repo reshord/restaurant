@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Tiro Telugu', serif;
 }
 
 a {
@@ -39,6 +41,7 @@ label {
 .header-logo__image {
     cursor: pointer;
     margin: 6px 15px;
+    width: 90px;
 }
 
 .header-signup {
@@ -47,16 +50,27 @@ label {
     margin: 0px 15px;
 }
 
-.header-nav__navigation:not(first-child) {
+.header-favourites img {
     margin-right: 20px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.header-nav__navigation:not(first-child) {
+    margin-right: 24px;
 }
 
 .header-nav__navigation {
-    font-size: 18px;
+    font-size: 21px;
+}
+
+.header-nav__navigation:hover {
+    text-decoration: underline;
 }
 
 .header-signup__register a {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .wrapper-block {
@@ -88,11 +102,6 @@ label {
     margin: 10px 50px 5px 0px;
 }
 
-
-
-
-
-
 .wrapper-block__sidebar-menu li {
     color: white;
     list-style: none;
@@ -114,9 +123,8 @@ label {
     border: 3px solid black;
     border-radius: 8px;
     width: 200px;
-    height: 250px;
+    height: 260px;
     background-color: white;
-    margin: 0;
 }
 
 .card-title {
@@ -150,7 +158,8 @@ label {
 }
 
 .card-btn {
-    border: 1px solid #1E1A1A;
+    border: 2px solid #1E1A1A;
+    border-radius: 7px;
     background: white;
     font-size: 15px;
     font-weight: 600;
@@ -175,13 +184,23 @@ label {
     }
 }
 
-@media(max-width: 760px) {
+@media(max-width: 761px) {
     .card {
         width: 150px;
-        height: 200px;
+        height: 230px;
+    }
+    .card-title {
+        font-size: 14px;
+    }
+    .card-weight {
+        font-size: 14px;
+    }
+    .card-price {
+        font-size: 14px;
     }
     .card-btn {
         margin-left: 30px;
+        font-size: 14px;
     }
     
 }
@@ -200,7 +219,7 @@ label {
     
 }
 
-@media(max-width: 446px) {
+@media(max-width: 452px) {
     .header-nav__navigation {
         font-size: 13px;
     }
@@ -208,23 +227,69 @@ label {
         width: 30px;
         height: 20px;
     } 
+    .header-favourites img {
+        width: 24px;
+        height: 24px;
+    }
     .header-signup__register a {
         font-size: 12px;
     }
     .card {
-        width: 120px;
-        height: 190px;
+        width: 130px;
+        height: 200px;
     }
     .card-title {
-        font-size: 14px;
+        font-size: 12px;
+    }
+    .card-weight {
+        font-size: 12px;
+    }
+    .card-price {
+        font-size: 12px;
     }
     .card-btn {
-        margin-left: 25px;
+        margin-left: 30px;
+        font-size: 12px;
+    }
+    .card-btn {
+        margin-left: 30px;
         padding: 0 5px;
         font-size: 14px;
     }
+    .wrapper-block__sidebar_element {
+        font-size: 13px;
+    }
+    .counter-radius {
+        display: none;
+    }
 }
 
+@media(max-width: 373px) {
+    .header-nav__navigation {
+        font-size: 10px;
+    }
+    .wrapper-block__sidebar_element {
+        font-size: 10px;
+    }
+    .card {
+        width: 110px;
+        height: 175px; 
+    }
+    .card-btn {
+        margin-left: 26px;
+        padding: 2 7px;
+        font-size: 10px;
+    }
+    .card-title {
+        font-size: 10px;
+    }
+    .card-weight {
+        font-size: 10px;
+    }
+    .card-price {
+        font-size: 10px;
+    }
+}
 
 @media(max-width: 855px) {
     .wrapper-block__sidebar__block1 {
@@ -240,3 +305,77 @@ label {
     }
 }
 
+.counter-radius {
+    color: white;
+    border: 1px solid red;
+    border-radius: 50%;
+    width: 18px;
+    height: 16px;
+    font-size: 10px;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 450px;
+    height: 240px;
+    background: white;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.modal-global_block {
+    display: flex;
+}
+
+.modal-block {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.modal-block div {
+    width: 110px;
+    height: 40px;
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    top: 160px;
+    right: 50px;
+    width: 180px;
+}
+
+.modal-close {
+    cursor: pointer;
+}

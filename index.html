@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&family=Tiro+Telugu:ital@1&display=swap" rel="stylesheet">
     <title>Restaurant</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -19,23 +20,21 @@
                 <a class="header-nav__navigation" href="">Contacts</a>
                 <a class="header-nav__navigation" href="">Reviews</a>
             </div>
-            <div class="header-signup">
-                <div class="header-signup__register">
-                    <a href="">Sign Up</a>
+            <div class="header-favourites">
+                <img class="favourites" src="./favourite.png" alt="">
+                <div class="counter-radius">
+                    0
                 </div>
-                <b>or</b>
-             <div class="header-signup__ig">   
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-            </div>
             </div>
         </header>
     <div class="wrapper-block">
       <div class="wrapper-block__sidebar">
             <div class="wrapper-block__sidebar-menu">
                 <li>Menu</li>
-            <div class="wrapper-block__sidebar__block1">
+                <div class="wrapper-block__sidebar_element">
+
+                </div>
+            <!-- <div class="wrapper-block__sidebar__block1">
                 <input id="big-mac" type="checkbox">
                 <label for="big-mac">Big Mac</label>
             </div>
@@ -49,8 +48,8 @@
             </div>
             <div class="wrapper-block__sidebar__block1">
                 <input id="run-tasty" type="checkbox">
-                <label for="run-tasty">Run Tasty®</label>
-            </div>
+                <label for="run-tasty">Run Tasty</label>
+            </div> -->
             </div>
       </div>
         <div class="wrapper-block__content">
@@ -59,7 +58,24 @@
         </div>
     </div>
 
-
+        <div class="modal">
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div style=" margin: 6px; font-size: 20px; " class="modal-close" >&times;</div>
+                <div class="modal-global_block">
+                    <!-- <div class="modal-block-image">
+                        <img style="margin-top: 20px; width: 170px; height: 110px;" class="modal-image" src="./big-mac.jpg" alt="">
+                    </div>
+                    <div class="modal-block">
+                        <div class="card-title">Big Mac</div>
+                        <div class="card-weight">220gr</div>
+                        <div class="card-price">600p</div>
+                        <button class="card-btn btn">Order</button>
+                    </div> -->
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
     <script src="index.js"></script>
 </body>
